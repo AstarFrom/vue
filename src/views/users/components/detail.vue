@@ -10,6 +10,9 @@
             <el-form-item>
                 <el-button @click="submitForm" type="primary">提交</el-button>
             </el-form-item>
+            <el-form-item>
+                <el-button @click="submitForm" type="primary">提交</el-button>
+            </el-form-item>
         </el-form>
     </div>
 </template>
