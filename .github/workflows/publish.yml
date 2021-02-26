@@ -4,20 +4,17 @@ on:
   push:
     branches:
       - master
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      #获取源码
-     - name: 迁出代码
-       uses: actions/checkout@master
-       # 安装node10
-     - name: 安装node.js
-       uses: actions/setup-node@v1
+      - name: 迁出代码
+        uses: actions/checkout@master
+            # 安装node10
+      - name: 安装node.js
+        uses: actions/setup-node@v1
         with:
           node-version: 14.0.0
-
       - name: 安装依赖
       - run: npm install
 
@@ -33,3 +30,5 @@ jobs:
           REMOTE_HOST: "172.19.9.2"
           REMOTE_USER: "iqps"
           TARGET: "D://11"
+      #获取源码
+
