@@ -1,0 +1,35 @@
+name: 打包上传服务器
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      #获取源码
+     - name: 迁出代码
+       uses: actions/checkout@master
+       # 安装node10
+     - name: 安装node.js
+       uses: actions/setup-node@v1
+        with:
+          node-version: 14.0.0
+
+      - name: 安装依赖
+      - run: npm install
+
+      - name: 打包
+      - run: npm run build
+
+      - name: 发布阿里云
+        users: easingthemes/ssh-deploy@2.1.1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: "-avzr --delete"
+          SOURCE: "dist"
+          REMOTE_HOST: "172.19.9.2"
+          REMOTE_USER: "iqps"
+          TARGET: "D://11"
