@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 迁出代码
-        uses: actions/checkout@main
+        uses: actions/checkout@master
             # 安装node10
       - name: 安装node.js
         uses: actions/setup-node@v1
