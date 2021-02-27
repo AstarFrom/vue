@@ -30,7 +30,7 @@ jobs:
           SOURCE: "dist"
           REMOTE_HOST: "47.93.116.218"
           REMOTE_USER: "root"
-          TARGET: "/root"
+          TARGET: "/root/test"
       #获取源码
 
 
