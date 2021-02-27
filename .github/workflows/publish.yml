@@ -3,13 +3,13 @@ name: 打包上传服务器
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: 迁出代码
-      - uses: actions/checkout@master
+        uses: actions/checkout@main
             # 安装node10
       - name: 安装node.js
         uses: actions/setup-node@v1
