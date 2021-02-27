@@ -28,9 +28,9 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: "-avzr --delete"
           SOURCE: "dist"
-          REMOTE_HOST: "172.19.9.2"
+          REMOTE_HOST: "47.93.116.218"
           REMOTE_USER: "iqps"
-          TARGET: "D://11"
+          TARGET: "/root"
       #获取源码
 
 
