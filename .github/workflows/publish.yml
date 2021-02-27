@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: 发布阿里云
-        uses: easingthemes/ssh-deploy@2.1.1
+        uses: easingthemes/ssh-deploy@v2.1.1
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: "-avzr --delete"
